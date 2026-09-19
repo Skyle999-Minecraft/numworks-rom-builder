@@ -4,6 +4,11 @@ Interface graphique Windows en Python/tkinter pour selectionner des ROMs NES
 ou Game Boy / Game Boy Color, preparer un conteneur multi-jeux et compiler
 l'emulateur correspondant. Aucun jeu ni emulateur n'est distribue ici.
 
+**Important :** les conteneurs doivent etre utilises avec les **emulateurs modifies**,
+pas avec leurs versions d'origine. L'outil regroupe les ROMs sans fusionner leur code.
+Voir le [guide multi-ROMs et installation](MULTI-ROMS.md) et le
+[resultat detaille de la verification des licences](LICENSE-REVIEW.md).
+
 ## Installation et dependances externes
 
 - Python 3.10+ avec tkinter.
