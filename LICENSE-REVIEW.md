@@ -61,4 +61,15 @@ d'integration, l'icone, les ajouts Color et les conditions de libsnss ; conserve
 les textes applicables, les credits, la provenance et la liste des modifications.
 Ajouter des credits ou une mention IA ne remplace pas ces autorisations.
 
-Aucun message ni issue n'a ete envoye aux mainteneurs au nom du contributeur.
+## Demandes de clarification envoyees
+
+Avec l'autorisation du proprietaire du compte, trois demandes publiques ont ete
+envoyees. Elles mentionnent explicitement leur redaction avec assistance IA :
+
+- Portage PeanutGB : https://github.com/nwagyu/peanutgb/issues/3
+- Portage Nofrendo et conditions libsnss : https://github.com/nwagyu/nofrendo/issues/5
+- Portee des licences du coeur Color : https://github.com/PicoPlus-devel/pico-peanutGB/issues/12
+
+Leur envoi ne vaut pas autorisation de redistribution : les reponses restent
+a examiner avant publication des portages. La demande concernant les ajouts
+de Yaya-Cout sur Codeberg est seulement un brouillon local, non envoye.
