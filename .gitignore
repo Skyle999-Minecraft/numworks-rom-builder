@@ -1,0 +1,32 @@
+# Secrets et preferences locales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*
+settings.json
+.claude/
+.vscode/
+__pycache__/
+*.pyc
+*.log
+# Ne jamais ajouter ROMs ou binaires, meme de demonstration
+*.nes
+*.gb
+*.gbc
+*.zip
+*.nwa
+*.bin
+*.elf
+*.o
+*.d
+build/
+output/
+output-python/
+shots/
+# Projets tiers locaux : ne pas les republier ici
+/nofrendo/
+/peanutgb/
