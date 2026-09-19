@@ -1,8 +1,64 @@
 # NumWorks ROM Builder
 
-Interface graphique Windows en Python/tkinter pour selectionner des ROMs NES
-ou Game Boy / Game Boy Color, preparer un conteneur multi-jeux et compiler
-l'emulateur correspondant. Aucun jeu ni emulateur n'est distribue ici.
+**Le but : mettre plusieurs de vos jeux NES ou Game Boy / Game Boy Color sur
+une NumWorks, puis choisir le jeu depuis un menu sur la calculatrice, sans
+refaire une installation pour chaque jeu.**
+
+ROM Builder est l'application graphique qui prepare tout sur le PC. L'emulateur
+modifie est l'application qui execute les jeux sur la calculatrice. Il faut les
+deux : ROM Builder seul ne permet pas de jouer.
+
+## Exemple concret
+
+Vous avez trois jeux Game Boy/Color obtenus legalement :
+
+1. Sur Windows, ouvrir ROM Builder et choisir **Game Boy / Game Boy Color**.
+2. Ajouter les trois fichiers `.gb` / `.gbc` et choisir un dossier de sortie.
+3. Cliquer sur **Preparer / compiler** : l'outil verifie les ROMs, les regroupe
+   dans `roms.gb`, puis compile l'application modifiee `peanutgb.nwa`.
+4. Sur https://my.numworks.com/apps, installer `peanutgb.nwa` en lui associant
+   `roms.gb` comme donnees externes. L'envoi USB reste une operation manuelle.
+5. Sur la calculatrice, ouvrir l'application Game Boy : un menu liste les trois
+   jeux ; choisir l'un d'eux avec les fleches et valider pour le lancer.
+
+Pour la NES, c'est le meme principe avec des fichiers `.nes` et le couple
+`nofrendo.nwa` + `roms.nes`.
+
+```text
+PC : vos ROMs individuelles
+            |
+      ROM Builder + sources de l'emulateur modifie
+            |
+      application .nwa + fichier regroupant les jeux
+            |
+      installation manuelle sur la NumWorks
+            |
+Calculatrice : menu de choix du jeu -> execution du jeu
+```
+
+Les jeux restent separes dans le fichier : « fusionner » signifie ici les
+**regrouper**, pas melanger leur code ou convertir une console en une autre.
+Le conteneur peut contenir jusqu'a 64 jeux d'une meme famille, sous reserve de
+la place disponible. Il faut deux applications distinctes pour NES et Game Boy.
+Avec une seule ROM, le jeu se lance directement, sans menu.
+
+## Ce qui est disponible aujourd'hui
+
+- **Publie ici :** l'interface Windows, son moteur de preparation et ses tests.
+- **Fonctionne dans l'environnement local complet :** preparation des ROMs et
+  compilation avec les deux portages modifies presents sur le PC.
+- **Pas encore distribue :** les sources et binaires des portages modifies,
+  dans l'attente de clarification de leurs licences. Telecharger ce depot seul
+  ne fournit donc pas encore tout le necessaire pour suivre l'exemple ci-dessus.
+- **Aucun jeu fourni.** Les essais PC ne garantissent pas la compatibilite de
+  chaque jeu ; le rendu et les performances Color restent a verifier sur materiel.
+
+Sur Game Boy, Accueil revient au menu s'il y a plusieurs jeux. Sur NES, quitter
+le jeu ferme l'application : la relancer permet d'en choisir un autre.
+Le portage Game Boy ne fournit ni son ni sauvegarde persistante.
+
+**Attention :** une installation d'applications externes remplace les autres.
+Selectionner en une seule operation tous les `.nwa` que vous souhaitez conserver.
 
 **Important :** les conteneurs doivent etre utilises avec les **emulateurs modifies**,
 pas avec leurs versions d'origine. L'outil regroupe les ROMs sans fusionner leur code.
